@@ -3,7 +3,7 @@
 #include <sql_show.h>
 #include <sql_parse.h>
 
-#define I_S_SCRIPT "/tmp/test.pl"
+#define I_S_SCRIPT "/tmp/test.pl 2>&1"
 
 static struct st_mysql_information_schema i_s_script_table_info=
 {

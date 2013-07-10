@@ -1,0 +1,1 @@
+MYSQL_ADD_PLUGIN(scripting_i_s scripting_i_s.cc)

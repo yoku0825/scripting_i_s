@@ -29,7 +29,7 @@ static int scripting_i_s (THD *thd, TABLE_LIST *tables, Item *cond)
 
   while (fgets(buff, 65535, pipe))
   {
-    sscanf(buff, "%s\t%s", name_col, value_col);
+    sscanf(buff, "%s %s", name_col, value_col);
     table->field[0]->store(name_col, strlen(name_col), system_charset_info);
     table->field[1]->store(value_col, strlen(value_col), system_charset_info);
     table->file->ha_write_row(table->record[0]);

@@ -23,9 +23,9 @@ static int scripting_i_s (THD *thd, TABLE_LIST *tables, Item *cond)
 
   TABLE *table= tables->table;
   FILE *pipe= popen(I_S_SCRIPT, "r");
-  char name_col[255];
-  char value_col[65535];
-  char buff[65535];
+  char name_col[255]= "";
+  char value_col[65535]= "";
+  char buff[65535]= "";
 
   while (fgets(buff, 65535, pipe))
   {
